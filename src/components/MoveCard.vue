@@ -1,60 +1,32 @@
 <script setup>
 import { ref, computed } from "vue";
-import { useMove } from "../composables/useMove";
+import { useMove, getMoveList } from "../composables/useMove";
 
-const props = defineProps({
-    moveId: Number
-})
-    const vals = ref({
-      message: 'Manage your aerial routine',
-      apparatusList: [
-        {
-          id: 1,
-          name: "lyra"
-        }
-      ]
+  const props = defineProps({
+      moveId: Number,
+      name: String
+  })
+  const vals = ref({
+    message: 'Manage your aerial routine',
+    apparatusList: [
+      {
+        id: 1,
+        name: "lyra"
+      }
+    ]
   });
 
-  const moveStore = useMove();
-  console.log(moveStore);
-
-
+  const moveList = getMoveList();
 </script>
 
 <template>
-  <div id="app">
-    <!-- <h1>Aerial Routines</h1>
-    <div v-if="routineList.length > 0" class="routine__wrapper">
-      <div v-for="routine in routineList" :routine="routine" :key="`routine=${routine.id}`" class="routine___card">
-        <h2>{{routine.name}}</h2>  
-        <p><strong>Apparatus: </strong>{{apparatusList[0].name}}</p>
-        <p><strong>Routine moves:</strong></p> -->
-        <div class="move-card__wrapper">
-          <div class="move-card">
-            {{ useMove( moveId) }}
-          </div>
-        </div>
-          
-      <!-- </div>
+    <div class="move-card">
+      {{ useMove( moveId, moveList ) }}
     </div>
-    <div style="padding: 30px;">
-      <button @click="createRoutine">{{ routineAddButton }} </button>
-    </div> -->
-    
-  </div> 
 </template>
 
 <style>
-  body {
-    background-color: #faedfd;
-  }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  
-}
+
 
 a,
 button {
@@ -79,27 +51,7 @@ button {
     border: solid 2px pink;
 
   }
-  .routine__wrapper {
-    display: grid;
-    grid-auto-flow: row;
-    justify-content: center;
-    align-items: center;
-     gap: 30px;
-    
-    @media (min-width: 750px) {
-      grid-template-columns: repeat(2, auto);
-    }
-  }
-  .routine___card {
-    background-color: #ffe4e9;
-    background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 74%, rgba(148,187,233,1) 100%);
-    border: 1px solid #3d5b7e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 5px 5px 10px 0px #3d5b7e;
 
-  }
   .move-card__wrapper {
     display: grid;
     grid-auto-flow: column;
@@ -108,11 +60,12 @@ background: radial-gradient(circle, rgba(238,174,202,1) 74%, rgba(148,187,233,1)
   .move-card {
     background-color: pink;
     border-color: purple;
-    padding: 20px;
-    display:flex;
     border-radius: 10px;
+    display:flex;
     font-weight: bold;
+    padding: 20px;
     position: relative;
+
   }
   
   .move-card::after {
@@ -123,6 +76,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 74%, rgba(148,187,233,1)
     height: 10px;
     right: -12px;
     color: #3d5b7e;
+    top: 40%;
   }
   
   .move-card:last-child:after {

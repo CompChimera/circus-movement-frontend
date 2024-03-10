@@ -44,9 +44,9 @@ export default {
     <h1>Circus Routine App</h1>
     <nav class="navigation">
       <div class="circus-actions">
-        <a class="nav-item" v-bind:class="{}" href="#" @click.prevent="showApparatusPage">Apparatus</a>
-        <a class="nav-item" href="#" @click.prevent="showMovePage">Move</a>
-        <a class="nav-item" href="#" @click.prevent="showRoutinePage">Routine</a>
+        <router-link class="nav-item" v-bind:class="{}" to="/apparatus" >Apparatus</router-link>
+        <router-link class="nav-item" to="/move" >Move</router-link>
+        <router-link class="nav-item" to="/routine" >Routine</router-link>
       </div>
       <div class="user-actions">
         <a class="nav-item">User Information</a>
@@ -58,6 +58,8 @@ export default {
 </template>
 
 <style>
-
+strong {
+  font-weight: bold;
+}
 </style>
 ./views/RoutinePage.vue./views/HomePage.vue./views/ApparatusPage.vue
