@@ -33,7 +33,7 @@ import MoveCard from '../components/MoveCard.vue';
 </script>
 
 <template>
-  <main>
+
     <h2>Routine</h2>
 
     <div v-if="routineList.length > 0" class="routine__wrapper">
@@ -42,9 +42,7 @@ import MoveCard from '../components/MoveCard.vue';
         <p><strong>Apparatus: </strong>{{apparatusList[0].name}}</p>
         <p><strong>Routine moves:</strong></p>
         <div v-if="routine.moves" class="move-card__wrapper">
-          <!-- <div v-for="(value, key) in routine.moves"  :key="`move=${moveId}`"> -->
             <MoveCard :moveId="value" v-for="(value, key) in routine.moves"  :key="`move=${moveId}`"/>
-          <!-- </div> -->
         </div>
         <div v-else class="move-card__wrapper">
           <span>No moves for this routine yet</span>
@@ -54,25 +52,14 @@ import MoveCard from '../components/MoveCard.vue';
       </div>
     </div>
     <div style="padding: 30px; text-align: center;">
-      <button @click="createRoutine">{{ routineAddButton }}</button>
+      <button @click="createRoutine" class="button">{{ routineAddButton }}</button>
     </div>
     
-  </main> </template>
+
+</template>
 
 <style>
 
-/* a,
-button {
-  color: #d78291;
-} */
-
-  
-  button:hover{
-    background-color: pink;
-    color: #3d5b7e;
-    border: solid 2px pink;
-
-  }
   .routine__wrapper {
     display: grid;
     grid-auto-flow: row;

@@ -1,11 +1,7 @@
 <script></script>
 
 <template>
-  <main>
     <h2>Apparatus</h2>
-    <!-- <label for="email">Email</label>
-    <input type="email" />
-    <button>Continue with email</button> -->
 
     <div>
         <button class="button">Create an Apparatus</button>
@@ -26,7 +22,7 @@
     <ul>
         <li>List of Apparatuses</li>
     </ul>
-  </main> 
+
 </template>
 
 <style>

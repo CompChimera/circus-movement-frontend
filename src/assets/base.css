@@ -9,7 +9,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
+   background-color: #faedfd;;
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -33,19 +33,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Buttons */
-.button {
-  background-color: lightpink;
-  padding: 10px;
-  color: rgb(122, 45, 58);
-  border-radius: 10px;
-  border: rgb(122, 45, 58) solid 4px;
+strong {
   font-weight: bold;
 }
 
+/* Buttons */
+.button {
+  background-color: #FFF;
+  border: solid 2px #3d5b7e;
+  border-radius: 2em;
+  font: inherit;
+  font-weight: bold;
+  padding: 0.75em 2em;
+  cursor: pointer;
+  -webkit-transition: all 1s; 
+  transition: all 1s; 
+}
+
+button:hover{
+  background-color: pink;
+  color: #3d5b7e;
+  border: solid 2px pink;
+}
+  
 .header-wrapper {
   display: flex;
 }
+
 /* Navigation */
 .navigation {
   display: flex;
@@ -55,9 +69,19 @@ body {
 .nav-item {
   padding: 10px;
   text-decoration: none;
-  color: purple;
+  color: #3d5b7e;
   background-color: rgb(216, 198, 216);
   border-radius: 10px;
+  box-shadow: 1px 1px 4px 0px #3d5b7e;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 1s; 
+  transition: all 1s; 
+}
+
+.nav-item:hover{
+  background-color: pink;
+  color: #3d5b7e;
 }
 
 .circus-actions, .user-actions {
@@ -77,3 +101,4 @@ body {
   padding: 5px;
   border-radius: 10px;
 }
+/* End Nav */

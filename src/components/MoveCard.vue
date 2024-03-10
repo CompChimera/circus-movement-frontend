@@ -26,57 +26,28 @@ import { useMove, getMoveList } from "../composables/useMove";
 </template>
 
 <style>
-
-
-a,
-button {
-  color: #d78291;
-}
-
-button {
-  background-color: #FFF;
-  border: solid 2px #3d5b7e;
-  border-radius: 2em;
-  font: inherit;
-  font-weight: bold;
-  padding: 0.75em 2em;
-  cursor: pointer;
-  -webkit-transition: all 1s; /* For Safari 3.0 to 6.0 */
-   transition: all 1s; /* For modern browsers */
-}
-  
-  button:hover{
-    background-color: pink;
-    color: #3d5b7e;
-    border: solid 2px pink;
-
-  }
-
-  .move-card__wrapper {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 15px;
-  }
   .move-card {
     background-color: pink;
     border-color: purple;
     border-radius: 10px;
+    color: #2c3e50;
     display:flex;
     font-weight: bold;
     padding: 20px;
     position: relative;
-
+    box-shadow: 5px 5px 10px 0px #3d5b7e;
   }
   
   .move-card::after {
     content: '>';
+    color: #3d5b7e;
     position: absolute;
     display: block;
     width: 10px;
     height: 10px;
     right: -12px;
-    color: #3d5b7e;
     top: 40%;
+    font-weight: bold;
   }
   
   .move-card:last-child:after {

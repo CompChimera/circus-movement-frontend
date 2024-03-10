@@ -58,8 +58,6 @@ export default {
 </template>
 
 <style>
-strong {
-  font-weight: bold;
-}
+
 </style>
 ./views/RoutinePage.vue./views/HomePage.vue./views/ApparatusPage.vue
