@@ -1,5 +1,11 @@
 # circus-routine-app
 
+Frontend Vue application to [circus-movement-rest-api](https://github.com/CompChimera/circus-movement-rest-api)
+
+
+<details>
+<summary>Vue Setup Readme</summary>
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
@@ -50,3 +56,4 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+</details>
