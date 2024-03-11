@@ -1,40 +1,22 @@
 <script>
-import HomePage from "./views/HomePage.vue";
-import ApparatusPage from "./views/ApparatusPage.vue";
-import MovePage from "./views/MovePage.vue";
-import RoutinePage from "./views/RoutinePage.vue";
+
 
 export default {
   components: {
-    ApparatusPage,
-    MovePage,
-    RoutinePage,
+
   },
   data: () => ({
     currentPage: "Home",
     userList: []
   }),
   computed: {
-    renderPage() {
-      return this.currentPage + 'Page';
-    },
+
     // activePageClass() {
       
     // }
   },
   methods: {
-    showApparatusPage() {
-      this.currentPage = "Apparatus";
-    },
-    showMovePage() {
-      this.currentPage = "Move";
-    },
-    showRoutinePage() {
-      this.currentPage = "Routine";
-    },
-    showHomePage() {
-      this.currentPage = "Home";
-    }
+
   }
 };
 </script>

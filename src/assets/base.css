@@ -79,7 +79,8 @@ button:hover{
   transition: all 1s; 
 }
 
-.nav-item:hover{
+
+.nav-item:hover, .nav-item.active-link{
   background-color: pink;
   color: #3d5b7e;
 }

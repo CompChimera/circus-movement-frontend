@@ -1,7 +1,5 @@
 import HomePage from './views/HomePage.vue'
-import MovePage from './views/MovePage.vue'
-import ApparatusPage from './views/ApparatusPage.vue'
-import RoutinePage from './views/RoutinePage.vue'
+
 export const routes = [
     {
         path: "/",
@@ -9,14 +7,25 @@ export const routes = [
     },
     {
         path: '/move',
-        component: MovePage
+        component:  () => import("@/views/MovePage.vue")
+    },
+    {
+        path: "/move/:id",
+        component: () => import("@/views/MoveSinglePage.vue"),
+        name: "singlemove"
     },
     {
         path: '/apparatus',
-        component: ApparatusPage
+        component: () => import("@/views/ApparatusPage.vue")
+    },
+    {
+        path: "/apparatus/:id",
+        component: () => import("@/views/ApparatusSinglePage.vue"),
+        name: "singleapparatus"
     },
     {
         path: '/routine',
-        component: RoutinePage
-    }
+        component: () => import("@/views/RoutinePage.vue")
+    },
+
 ];

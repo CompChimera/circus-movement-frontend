@@ -10,7 +10,8 @@ import App from './App.vue'
 const app = createApp(App)
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes,
+    linkActiveClass: 'active-link'
 })
 
 app.use(createPinia())
