@@ -4,6 +4,11 @@ Frontend Vue application to [circus-movement-rest-api](https://github.com/CompCh
 
 ## Later Development
 Structure to change as connections to API are working. Populating data directly in Vue at the moment.
+
+
+### Deployment
+Deployment to GitHub Pages
+https://mkay11.medium.com/how-to-deploy-your-vite-vue-3-application-in-github-pages-2023-2b842f50576a
 <details>
 <summary>Vue Setup Readme</summary>
 
