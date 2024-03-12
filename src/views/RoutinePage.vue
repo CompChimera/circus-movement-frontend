@@ -86,27 +86,4 @@ import MoveCard from '../components/MoveCard.vue';
     grid-auto-flow: column;
     gap: 15px;
   }
-  /* .move-card {
-    background-color: pink;
-    border-color: purple;
-    padding: 20px;
-    display:flex;
-    border-radius: 10px;
-    font-weight: bold;
-    position: relative;
-  }
-  
-  .move-card::after {
-    content: '>';
-    position: absolute;
-    display: block;
-    width: 10px;
-    height: 10px;
-    right: -12px;
-    color: #3d5b7e;
-  }
-  
-  .move-card:last-child:after {
-    content: ''; */
-  /* } */
   </style>

@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router';
 import MoveCard from '../components/MoveCard.vue';
 import { useMove, getMoveList,  moveListGlobal, useMovesFromApparatus } from "../composables/useMove";
 
-import {apparatusListGlobal, getApparatus} from '@/composables/useApparatus.js';
+import {getApparatus} from '@/composables/useApparatus.js';
 
 
 const route = useRoute();
@@ -22,6 +22,7 @@ const apparatus = getApparatus(route.params.id);
         <p>There are no moves yet for this apparatus. Time to add some!</p>
         <div>
             Form to add move for {{ apparatus.name }}
+            <!-- TODO: add form and functionality -->
         </div>
     </div>
 </template>

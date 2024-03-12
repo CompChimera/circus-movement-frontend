@@ -12,5 +12,5 @@
     }
   },
   "noImplicitAny": false,
-"allowJs": true,
+  "allowJs": true,
 }

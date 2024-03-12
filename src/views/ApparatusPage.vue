@@ -3,8 +3,6 @@ import {apparatusListGlobal} from '@/composables/useApparatus.js';
 import { reactive, ref, computed } from "vue";
 import {useRouter} from "vue-router";
 
-
-console.log(apparatusListGlobal.value);
 const apparatusName = ref("");
 const apparatusDescription = ref("");
 const router = useRouter();
@@ -12,10 +10,17 @@ const router = useRouter();
 // const apparatusLink
 
 function addApparatus(){
+    const newName = apparatusName.value;
+    const newDescription = apparatusDescription.value;
+
+    if( !newName || !newDescription ){
+        return;
+    }
+
     const newApparatus = {
         id: apparatusListGlobal.value.length+1,
-        name: apparatusName.value,
-        description: apparatusDescription.value
+        name: newName,
+        description: newDescription
     }
     apparatusListGlobal.value.push(newApparatus);
 
@@ -24,7 +29,6 @@ function addApparatus(){
 
         router.push(newUrl);
     }
-
 }
 </script>
 
@@ -51,59 +55,58 @@ function addApparatus(){
             <button class="button submit" @click="addApparatus">Add Apparatus</button>
         </div>
     </div>
-
 </template>
 
 <style>
-.apparatus__create-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    max-width: 500px;
-}
+    .apparatus__create-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        max-width: 500px;
+    }
 
-.apparatus__create-wrapper label {
-    font-weight: bold;
-}
+    .apparatus__create-wrapper label {
+        font-weight: bold;
+    }
 
-.apparatus__create-wrapper button {
-    margin-top: 20px;
-}
+    .apparatus__create-wrapper button {
+        margin-top: 20px;
+    }
 
-.apparatus__create-wrapper input {
-    border-radius: 10px;
-    padding-left: 10px;
-}
+    .apparatus__create-wrapper input {
+        border-radius: 10px;
+        padding-left: 10px;
+    }
 
-.apparatus-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    padding-bottom: 20px;
-}
+    .apparatus-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        padding-bottom: 20px;
+    }
 
-.apparatus-list__item {
-    background-color: pink;
-    border:1px solid #3d5b7e;
-    border-radius: 10px;
-    color: #2c3e50;
-    display:flex;
-    flex-direction: column;
-    font-weight: bold;
-    position: relative;
-}
+    .apparatus-list__item {
+        background-color: pink;
+        border:1px solid #3d5b7e;
+        border-radius: 10px;
+        color: #2c3e50;
+        display:flex;
+        flex-direction: column;
+        font-weight: bold;
+        position: relative;
+    }
 
-.apparatus-list__item:hover {
-    background-color: #ffe4e9;
-    color: #2c3e50;
-}
+    .apparatus-list__item:hover {
+        background-color: #ffe4e9;
+        color: #2c3e50;
+    }
 
-.apparatus-list__item-link {
-    text-decoration: none;
-    color: #2c3e50;
-    padding: 20px;
-}
+    .apparatus-list__item-link {
+        text-decoration: none;
+        color: #2c3e50;
+        padding: 20px;
+    }
 
-.apparatus-list__item-link:hover {
-    text-decoration: underline;
-}
+    .apparatus-list__item-link:hover {
+        text-decoration: underline;
+    }
 </style>
