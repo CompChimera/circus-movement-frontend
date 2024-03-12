@@ -2,13 +2,23 @@
 
 Frontend Vue application to [circus-movement-rest-api](https://github.com/CompChimera/circus-movement-rest-api)
 
+Build aerial circus routines with custom added tricks. 
+
 ## Later Development
-Structure to change as connections to API are working. Populating data directly in Vue at the moment.
+*Structure to change as connections to API are implemented. Populating data directly in Vue at the moment.*
+
+* Adding apparatuses is working.
+* Framework for adding a new routine is added with default routine data. 
+* Move frontend logic (display single or add new) not implemented.
 
 
 ### Deployment
 Deployment to GitHub Pages
-https://mkay11.medium.com/how-to-deploy-your-vite-vue-3-application-in-github-pages-2023-2b842f50576a
+
+Run `npm run deploy` within *Git Bash*. Windows Commandline doesn't prompt credentials accurately. 
+
+Reference: https://mkay11.medium.com/how-to-deploy-your-vite-vue-3-application-in-github-pages-2023-2b842f50576a
+
 <details>
 <summary>Vue Setup Readme</summary>
 
