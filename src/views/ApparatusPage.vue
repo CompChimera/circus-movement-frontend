@@ -31,9 +31,6 @@ function addApparatus(){
 <template>
     <h2>Apparatus</h2>
 
-    <!-- <div>
-        <button class="button">Create an Apparatus</button>
-    </div> -->
     <div class="apparatus-list">
         <div v-for="apparatus in apparatusListGlobal" class="apparatus-list__item" :apparatus="apparatus.id" :key="`apparaus=${apparatus.id}`">
             <router-link :to='{name: "singleapparatus", params: {id: apparatus.id}}' class="apparatus-list__item-link">
@@ -45,7 +42,7 @@ function addApparatus(){
 
     <div>
         <h3>Create Apparatus</h3>
-            <div class="apparatus__create-wrapper">
+        <div class="apparatus__create-wrapper">
             <label for="name">Name (Character req):</label>
             <input type="text" id="name" v-model="apparatusName" required/>
             
@@ -61,10 +58,21 @@ function addApparatus(){
 .apparatus__create-wrapper {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    max-width: 500px;
 }
 
 .apparatus__create-wrapper label {
     font-weight: bold;
+}
+
+.apparatus__create-wrapper button {
+    margin-top: 20px;
+}
+
+.apparatus__create-wrapper input {
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 .apparatus-list {

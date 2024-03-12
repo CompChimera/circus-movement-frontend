@@ -2,7 +2,8 @@
 
 Frontend Vue application to [circus-movement-rest-api](https://github.com/CompChimera/circus-movement-rest-api)
 
-
+## Later Development
+Structure to change as connections to API are working. Populating data directly in Vue at the moment.
 <details>
 <summary>Vue Setup Readme</summary>
 

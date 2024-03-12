@@ -1,5 +1,10 @@
 @import './base.css';
+@import './css/nav.css';
 
 #app {
-  padding: 50px;
+  padding: 20px;
+
+  @media (min-width: var(--md-screen)){
+    padding: 50px;
+  }
 }
