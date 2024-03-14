@@ -11,8 +11,8 @@ export const routes = [
     },
     {
         path: "/move/:id",
-        component: () => import("@/views/MoveSinglePage.vue"),
-        name: "singlemove"
+        component: () => import("@/views/MoveDetailPage.vue"),
+        name: "movedetail"
     },
     {
         path: '/apparatus',
@@ -20,8 +20,8 @@ export const routes = [
     },
     {
         path: "/apparatus/:id",
-        component: () => import("@/views/ApparatusSinglePage.vue"),
-        name: "singleapparatus"
+        component: () => import("@/views/ApparatusDetailPage.vue"),
+        name: "apparatusdetail"
     },
     {
         path: '/routine',

@@ -22,7 +22,7 @@ A piece of info to categorize the apparatuses. They are considered Soft Apparatu
 
 * Adding apparatuses is working.
 * Framework for adding a new routine is added with default routine data. 
-* Move frontend logic (display single or add new) not implemented.
+* Move frontend logic (display detail or add new) not implemented.
 
 ## Deployment
 Deployment to GitHub Pages

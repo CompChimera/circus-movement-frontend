@@ -37,7 +37,7 @@ function addApparatus(){
 
     <div class="apparatus-list">
         <div v-for="apparatus in apparatusListGlobal" class="apparatus-list__item" :apparatus="apparatus.id" :key="`apparaus=${apparatus.id}`">
-            <router-link :to='{name: "singleapparatus", params: {id: apparatus.id}}' class="apparatus-list__item-link">
+            <router-link :to='{name: "apparatusdetail", params: {id: apparatus.id}}' class="apparatus-list__item-link">
                 <span><strong>{{ apparatus.name }}</strong></span>
                 <div>Description: {{ apparatus.description }}</div>
             </router-link>
