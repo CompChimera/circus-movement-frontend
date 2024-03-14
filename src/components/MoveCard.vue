@@ -1,27 +1,20 @@
 <script setup>
-import { ref, computed } from "vue";
-import { useMove, getMoveList } from "../composables/useMove";
+import { storeToRefs } from 'pinia';
+import { useMoveStore } from "@/stores/MovesStore";
 
   const props = defineProps({
       moveId: Number,
       name: String
   })
-  const vals = ref({
-    message: 'Manage your aerial routine',
-    apparatusList: [
-      {
-        id: 1,
-        name: "lyra"
-      }
-    ]
-  });
 
-  const moveList = getMoveList();
+  const moveStore = useMoveStore();
+  const {getMoveById} = storeToRefs(moveStore)
+
 </script>
 
 <template>
     <div class="move-card">
-      {{ useMove( moveId, moveList ) }}
+      {{ getMoveById(moveId).name }}
     </div>
 </template>
 
