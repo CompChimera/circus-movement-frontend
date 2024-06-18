@@ -1,0 +1,42 @@
+/* Navigation */
+.navigation {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    padding: 10px;
+    text-decoration: none;
+    color: #3d5b7e;
+    background-color: rgb(216, 198, 216);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 0px #3d5b7e;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all 1s; 
+    transition: all 1s; 
+  }
+  
+  .nav-item:hover, .nav-item.active-link{
+    background-color: pink;
+    color: #3d5b7e;
+  }
+  
+  .circus-actions, .user-actions {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+  }
+  .circus-actions {
+    background-color: pink;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .user-actions {
+    margin-left: 10px;
+    background-color: pink;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  /* End Nav */

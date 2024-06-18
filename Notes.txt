@@ -1,0 +1,11 @@
+/apparatus/1/move  [get, post]
+
+/routine/1/move/1  [post, delete]
+
+/move/1   [get, delete, put]
+
+
+
+vue
+composition API - 'script setup' talks about how to set things up a little easier. Alternative is Options API 
+Composition seems to be a good option for my little app 
